@@ -10,3 +10,9 @@
  ## Para instalar todas las dependencias que vamos a necesitar en este presente proyecto
 
 pip install matplotlib
+
+ ## Graphs.
+  
+<img src="https://github.com/deividbautista/Graphs_in_python/blob/main/img/graphs_1.png" width="1000 px"/>
+<img src="https://github.com/deividbautista/Graphs_in_python/blob/main/img/graphs_2.png" width="1000 px"/>
+<img src="https://github.com/deividbautista/Graphs_in_python/blob/main/img/graphs_3.png" width="1000 px"/>
