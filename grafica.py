@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 # de este primer formato de grafica.
 
 # Indicamos el nombre de paises como información de ejemplo en este proyecto.
-paises = ['japon','españa','rusia','inglaterra']
+paises = ['Japon','España','Rusia','Inglaterra']
 
 # Indicamos valores arbitrarios cualquiera, como por ejemplo.
 valores = [1000,4500,2000,1500]
@@ -21,7 +21,7 @@ valores = [1000,4500,2000,1500]
 colores = ['#30002c','#6e0dc9d2','#30002c','#6e0dc9d2']
 
 # Utilizamos la variable title para indicar un titulo en la pestaña de la grafica, valga la redundancia.
-pyplot.title ('wenas soy un titulo suave para poner como ejemplo.')
+pyplot.title ('Wenas soy un titulo suave para poner como ejemplo.')
 
 # Se utiliza la variable bar, para determinar el tipo de grafico que requerimos, en este caso va ser un grafico de barras.
 pyplot.bar(paises, height=valores, color=colores, width=0.5)
@@ -117,8 +117,8 @@ fig.suptitle('Graficos multiples.')
 
 # Para poder acomodar estos graficos sin error alguno, tenemos que saber una cosa de ante mano y es que las posiciones de esto 
 # se vera determinada con valores de un plano carteciano, ¿osea?, bueno vamos a ubicarnos a traves de coordenadas, si recordamos 
-# las clases de primaria, el primer valor es el eje x "Horizontal" y el segundo es el eje y "Vertical", y si entendemos que 
-# tenemos dos columnas y dos filas, osea cuatro celdas, pues hace sencillo comprender que si tenemos las coordenadas [0,0] podemos 
+# las clases de primaria, el primer valor es el eje X "Horizontal" y el segundo es el eje Y "Vertical", y si entendemos que 
+# tenemos dos columnas y dos filas, osea cuatro celdas, pues se hace sencillo comprender que si tenemos las coordenadas [0,0] podemos 
 # intuir que sera la posición base o inicial, la cual sera en la en la primera casilla a la izquierda, entendiendo esto, sabremos que 
 # si ahora tenemos las coordernadas [0,1] estaremos en la misma columna del eje x, osea la primera a la izquierda, pero una fila 
 # abajo en el eje y, así sucesivamente podremos acomodar cada uno de lo graficos, puedes jugar con los valores de coordenadas si 
