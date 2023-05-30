@@ -83,3 +83,22 @@ plt.pie(manzanas, labels=nombres, autopct="%0.1f %%", colors=colores, explode=de
 # Implementamos axis para determinar la forma que queremos que tenga el pastel, quitalo y te daras cuenta cuenta con mejor comprensión.
 plt.axis("equal")
 plt.show()
+
+#-----------------------------------------------
+# Grafico de pastel basico :3 ñam~
+#-----------------------------------------------
+
+fig, ax = plt.subplots(2, 2, sharey = True)
+
+# Indicamos el nombre de paises como información de ejemplo en este proyecto.
+paises = { 'asiaticos':[ 'Japon','China','Korea','Taiwan'], 'europeos':['Italia','Noruega','Islandia','Alemania']}
+
+# Indicamos valores arbitrarios cualquiera, como por ejemplo.
+valores = {'asia':[1000,4500,2000,1500], 'europa':[1004,3500,5080,2500]}
+
+ax[0, 0].plot(paises['asiaticos'], valores['asia'], color = '#FCA03E')
+ax[0, 1].plot(paises['europeos'], valores['europa'], color = '#6e0dc9d2')
+ax[1, 0].bar(paises['asiaticos'], valores['asia'], color = '#FCA03E')
+ax[1, 1].bar(paises['europeos'], valores['europa'], color = '#6e0dc9d2')
+plt.show()
+
