@@ -58,6 +58,8 @@ plt.plot(linea1, color='#30002c', linestyle='--', marker='o')
 plt.fill_between(eje_x, linea1, color='#31003362')
 # Con "subplots_adjust", podemos editaar parametros determinado para centrar o ajustar la posición del grafico.
 plt.subplots_adjust(wspace=0.85, bottom=0.3)
+
+# Por ultimo se utiliza "plt.show", para ejecutar nuestro grafico en una ventana emergente individual.
 plt.show()
 
 #-----------------------------------------------
@@ -82,12 +84,18 @@ plt.pie(manzanas, labels=nombres, autopct="%0.1f %%", colors=colores, explode=de
 
 # Implementamos axis para determinar la forma que queremos que tenga el pastel, quitalo y te daras cuenta cuenta con mejor comprensión.
 plt.axis("equal")
+
+# Por ultimo se utiliza "plt.show", para ejecutar nuestro grafico en una ventana emergente individual.
 plt.show()
 
 #-----------------------------------------------
-# Grafico de pastel basico :3 ñam~
+# Multiples graficos 
 #-----------------------------------------------
 
+# Okey aqui presentaremos una forma muy facil de poder tener varios graficos sin que estos se crucen o superpongan entre ellos
+# para poder realizar esto, necesitamos utilizar la propiedad "subplots", donde actuara como una tabla a lo que indicaremos
+# dos filas y dos columnas como valores de la propiedad "subplots" junto con el parametro "sharey =True", para compartir
+# el uso de propiedades en el eje "Y".
 fig, ax = plt.subplots(2, 2, sharey = True)
 
 # Indicamos el nombre de paises como información de ejemplo en este proyecto.
@@ -96,9 +104,27 @@ paises = { 'asiaticos':[ 'Japon','China','Korea','Taiwan'], 'europeos':['Italia'
 # Indicamos valores arbitrarios cualquiera, como por ejemplo.
 valores = {'asia':[1000,4500,2000,1500], 'europa':[1004,3500,5080,2500]}
 
+# Para poder acomodar estos graficos sin error alguno, tenemos que saber una cosa de ante mano y es que las posiciones de esto 
+# se vera determinada con valores de un plano carteciano, ¿osea?, bueno vamos a ubicarnos a traves de coordenadas, si recordamos 
+# las clases de primaria, el primer valor es el eje x "Horizontal" y el segundo es el eje y "Vertical", y si entendemos que 
+# tenemos dos columnas y dos filas, osea cuatro celdas, pues hace sencillo comprender que si tenemos las coordenadas [0,0] podemos 
+# intuir que sera la posición base o inicial, la cual sera en la en la primera casilla a la izquierda, entendiendo esto, sabremos que 
+# si ahora tenemos las coordernadas [0,1] estaremos en la misma columna del eje x, osea la primera a la izquierda, pero una fila 
+# abajo en el eje y, así sucesivamente podremos acomodar cada uno de lo graficos, puedes jugar con los valores de coordenadas si 
+# no te quedo algo en claro, para que comprendas su funcionamiento de forma empirica UwU.
+
+# Primer grafico lineal de paises asiaticos.
 ax[0, 0].plot(paises['asiaticos'], valores['asia'], color = '#FCA03E')
+
+# Primer grafico lineal de paises europeos.
 ax[0, 1].plot(paises['europeos'], valores['europa'], color = '#6e0dc9d2')
+
+# Segundo grafico de barras de paises asiaticos.
 ax[1, 0].bar(paises['asiaticos'], valores['asia'], color = '#FCA03E')
+
+# Segundo grafico de barras de paises europeos.
 ax[1, 1].bar(paises['europeos'], valores['europa'], color = '#6e0dc9d2')
+
+# Por ultimo se utiliza "plt.show", para ejecutar nuestro grafico en una ventana emergente individual.
 plt.show()
 
