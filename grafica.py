@@ -53,7 +53,10 @@ plt.xlabel("Días transcurridos")
 plt.plot(linea1, color='#30002c', linestyle='--', marker='o')
 
 # En este apartado personalizamos el plano de la grafica para que se adapte mejor a nuestras necesidades y gustos.
+
+# Utilizamos "between" para poder dibujar el relleno de la grafica para hacer que esta tenga una estetica mucho más agradable.
 plt.fill_between(eje_x, linea1, color='#31003362')
+# Con "subplots_adjust", podemos editaar parametros determinado para centrar o ajustar la posición del grafico.
 plt.subplots_adjust(wspace=0.85, bottom=0.3)
 plt.show()
 
