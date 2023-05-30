@@ -11,7 +11,7 @@
 
 pip install matplotlib
 
- ## Graphs.
+ ## Graphs / Graficos.
   
 <img src="https://github.com/deividbautista/Graphs_in_python/blob/main/img/graphs_1.png" width="1000 px"/>
 <img src="https://github.com/deividbautista/Graphs_in_python/blob/main/img/graphs_2.png" width="1000 px"/>
