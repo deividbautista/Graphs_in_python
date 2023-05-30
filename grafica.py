@@ -21,7 +21,7 @@ valores = [1000,4500,2000,1500]
 colores = ['#30002c','#6e0dc9d2','#30002c','#6e0dc9d2']
 
 # Utilizamos la variable title para indicar un titulo en la pestaña de la grafica, valga la redundancia.
-pyplot.title ('wenas soy un titulo suave para poner como ejemplo')
+pyplot.title ('wenas soy un titulo suave para poner como ejemplo.')
 
 # Se utiliza la variable bar, para determinar el tipo de grafico que requerimos, en este caso va ser un grafico de barras.
 pyplot.bar(paises, height=valores, color=colores, width=0.5)
@@ -49,6 +49,9 @@ linea1 = [0,1,2,3,4,5,6,7,5,9,11]
 plt.ylabel("Ventas realizadas por dia")
 plt.xlabel("Días transcurridos")
 
+# Utilizamos la variable title para indicar un titulo en la pestaña de la grafica, valga la redundancia.
+pyplot.title ('Grafico lineal.')
+
 # En esta linea personalizamos la linea de comportamiento, como deseemos. 
 plt.plot(linea1, color='#30002c', linestyle='--', marker='o')
 
@@ -73,6 +76,9 @@ nombres = ["Ana","Juan","Diana","Catalina"]
 # En esta parte definimos los colores a travez de arrays para cada una de nuestras secciones del pastel.
 colores = ["#EE6055","#60D394","#AAF683","#FFD97D","#FF9B85"]
 
+# Utilizamos la variable title para indicar un titulo en la pestaña de la grafica, valga la redundancia.
+pyplot.title ('Grafico de pastel. \n')
+
 # Aqui tenemos una funcion curiosa y es la del desfase, donde definimos una variable que guarde los valores de coordenada y con esto  
 # indicamos los pixeles de desfase que deseamos que contenga la sección desde el radio del pastel, esto para emular que la sección
 # esta sobresaliendo como una rebanada recién cortada.
@@ -96,6 +102,7 @@ plt.show()
 # para poder realizar esto, necesitamos utilizar la propiedad "subplots", donde actuara como una tabla a lo que indicaremos
 # dos filas y dos columnas como valores de la propiedad "subplots" junto con el parametro "sharey =True", para compartir
 # el uso de propiedades en el eje "Y".
+
 fig, ax = plt.subplots(2, 2, sharey = True)
 
 # Indicamos el nombre de paises como información de ejemplo en este proyecto.
@@ -103,6 +110,10 @@ paises = { 'asiaticos':[ 'Japon','China','Korea','Taiwan'], 'europeos':['Italia'
 
 # Indicamos valores arbitrarios cualquiera, como por ejemplo.
 valores = {'asia':[1000,4500,2000,1500], 'europa':[1004,3500,5080,2500]}
+
+# En el caso de estar usando propiedades de personalización con "subplots", neceitamos poner el titulo de la siguiente manera con "fig." 
+# y la propiedad suptitle para determinarlo como titulo principal.
+fig.suptitle('Graficos multiples.')
 
 # Para poder acomodar estos graficos sin error alguno, tenemos que saber una cosa de ante mano y es que las posiciones de esto 
 # se vera determinada con valores de un plano carteciano, ¿osea?, bueno vamos a ubicarnos a traves de coordenadas, si recordamos 
@@ -120,10 +131,10 @@ ax[0, 0].plot(paises['asiaticos'], valores['asia'], color = '#FCA03E')
 ax[0, 1].plot(paises['europeos'], valores['europa'], color = '#6e0dc9d2')
 
 # Segundo grafico de barras de paises asiaticos.
-ax[1, 0].bar(paises['asiaticos'], valores['asia'], color = '#FCA03E')
+ax[1, 0].bar(paises['asiaticos'], valores['asia'], color = '#FCA03E', width=0.4)
 
 # Segundo grafico de barras de paises europeos.
-ax[1, 1].bar(paises['europeos'], valores['europa'], color = '#6e0dc9d2')
+ax[1, 1].bar(paises['europeos'], valores['europa'], color = '#6e0dc9d2', width=0.35)
 
 # Por ultimo se utiliza "plt.show", para ejecutar nuestro grafico en una ventana emergente individual.
 plt.show()
