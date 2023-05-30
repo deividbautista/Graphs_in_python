@@ -18,7 +18,7 @@ paises = ['japon','españa','rusia','inglaterra']
 valores = [1000,4500,2000,1500]
 
 # Indicamos los colores de nuestra preferencia para utilizar.
-colores = ['#30002c','#30002c','#30002c','#30002c']
+colores = ['#30002c','#6e0dc9d2','#30002c','#6e0dc9d2']
 
 # Utilizamos la variable title para indicar un titulo en la pestaña de la grafica, valga la redundancia.
 pyplot.title ('wenas soy un titulo suave para poner como ejemplo')
@@ -53,6 +53,7 @@ plt.xlabel("Días transcurridos")
 plt.plot(linea1, color='#30002c', linestyle='--', marker='o')
 
 # En este apartado personalizamos el plano de la grafica para que se adapte mejor a nuestras necesidades y gustos.
+plt.fill_between(eje_x, linea1, color='#31003362')
 plt.subplots_adjust(wspace=0.85, bottom=0.3)
 plt.show()
 
