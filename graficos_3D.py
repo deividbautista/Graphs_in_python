@@ -65,7 +65,7 @@ plt.show()
 
 #https://www.geeksforgeeks.org/3d-surface-plotting-in-python-using-matplotlib/
 
-# Creating dataset
+# Definimos los datos topograficos de la parcela
 x = np.outer(np.linspace(-3, 3, 32), np.ones(32))
 y = x.copy().T # transpose
 z = (np.sin(x **2) + np.cos(y **2) )
@@ -99,7 +99,7 @@ fig.colorbar(surf, ax = ax,
              shrink = 0.5,
              aspect = 5)
  
-# Adding labels
+# PAra proyectar de manera 2d lo representado en el entorno 3D
 ax.set_xlabel('X-axis')
 ax.set_xlim(-5, 5)
 ax.set_ylabel('Y-axis')
