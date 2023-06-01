@@ -9,7 +9,7 @@
  
  ## Para instalar todas las dependencias que vamos a necesitar en este presente proyecto
 
-pip install matplotlib
+pip install -r dependencies.txt 
 
  ## Graphs / Graficos.
   
