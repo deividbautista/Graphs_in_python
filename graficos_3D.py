@@ -23,19 +23,24 @@ ax = fig.add_subplot(111, projection='3d')
 # Tenemos en las proximas lineas de codigo arrays con datos que utilizaremos como ejemplo para el desarrollo
 # de este primer formato de grafica.
 
-# Indicamos el nombre de paises como información de ejemplo en este proyecto.
-paises = ['Japon','España','Rusia','Inglaterra']
 
-# Indicamos valores arbitrarios cualquiera, como por ejemplo.
+# Indicamos valores arbitrarios cualquiera, como ejemplo para este grafico.
 valores = [1000,4500,2000,1500]
+
 # Coordenadas de cada barra, como ahora nos moveremos en un entorno tridimencional, la forma de transferir datos 
 # en la grafica, seran un poco diferentes
 x = [0,1,2,3]
 y = [0,1,2,3]
 z = np.zeros(4)
 
-dx = np.ones(4) #ANCHURA DE CADA BARRA
+# Estos valores seran aquellos que determinen los valores de anchura y profundidad del las barras, este caso los
+# determinamos de manera hacendiente automatica con la propiedad "np.ones", que utiliza los valores dentro del 
+# rango de 4 para poder posicionar de manera uniforma las barras, pero esto tambien se podria hacer a mano 
+# modificando los valores como un array osea valores dentro de corchetes de este tipo [].
+dx = np.ones(4)#ANCHURA DE CADA BARRA
 dy = np.ones(4) #PROFUNDIDAD DE CADA BARRA
+
+# Valores que determinaran la altura de las barras que son las caracteristicas que reflejaran los datos estadisticos.
 valores = [1000,4500,2000,1500] #ALTURA DE CADA BARRA
 
 # Indicamos los colores de nuestra preferencia para utilizar.
@@ -44,7 +49,11 @@ colores = ['#30002c','#6e0dc9d2','#30002c','#6e0dc9d2']
 # Utilizamos la variable title para indicar un titulo en la pestaña de la grafica, valga la redundancia.
 pyplot.title ('Grafico de barras en 3D.')
 
-# Se utiliza la variable bar, para determinar el tipo de grafico que requerimos, en este caso va ser un grafico de barras.
+# Indicamos el nombre de paises como información de ejemplo en este proyecto.
+ax.set_xlabel('Japon  España  Rusia  Inglaterra')
+
+# Se utiliza la variable bar, para determinar el tipo de grafico que requerimos, en este caso va ser un grafico de barras
+# y le añadimos la leyenda 3d, para tener el formato de grafico que deseamos, retiralo para que puedas ver su utilidad.
 ax.bar3d (x, y, z, dx, dy, valores, color=colores)
 
 # Por ultimo se utiliza "plt.show", para ejecutar nuestro grafico en una ventana emergente individual.
