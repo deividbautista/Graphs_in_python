@@ -16,7 +16,10 @@ from mpl_toolkits.mplot3d import axes3d
 # Grafico basico de barras en 3D. 
 #-----------------------------------------------
 
-
+# Utilizamos el siguiente metodo que es el más coloquial, definimos una variable fig la cual
+# sera en sintesis la que contendra nuestra figura o grafica principal, seguido definimos la varible ax
+# con los parametros requeridos para el grafico, en este caso, le brindamos la projección 3d por medio.
+# del parametro "projection='3d'" 
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
 
@@ -60,9 +63,36 @@ ax.bar3d (x, y, z, dx, dy, valores, color=colores)
 plt.show()
 
 #-----------------------------------------------
+# Grafico lineal en 3D. 
+#-----------------------------------------------
+
+#Ejemplo sustraido del Canal Pro Ciencia 
+#https://youtu.be/CVM3hOrXU1U
+
+# Al igual que en el ejemplo anterior utilizamso el mismo metodo para definir la figura/grafica requerida.
+fig = plt.figure()
+ax = plt.axes(projection ='3d')
+
+# Definimos los valores de "x" y "y", para usar como ejemplo una función trigonometrica a graficar.
+x = np.linspace (-4, 4, 50)
+y = np.linspace (-4, 4, 50)
+
+# Definimos la tercera variable necesasria para el entorno tridimensional, la cual tendra los valores 
+# de coordenadas de "x" y "y".
+def z (x,y):
+
+    # Utilizamos la plabra reservada return, para obtener el resultado del calculo de seno (np.sin) 
+    # de la raíz cuadrada (np.sqrt), de la suma de "x" elevado ^ a la 2 y "y" elevado ^ a la 2
+    return np.sin(np.sqrt(x**2 + y**2))
+
+ax.plot(x, y, z(x,y))
+plt.show()
+
+#-----------------------------------------------
 # Algo no tan basico en 3D. 
 #-----------------------------------------------
 
+#Ejemplo sustraido del portal web GeeksforGeeks
 #https://www.geeksforgeeks.org/3d-surface-plotting-in-python-using-matplotlib/
 
 # Definimos los datos topograficos de la parcela
@@ -71,7 +101,7 @@ y = x.copy().T # transpose
 z = (np.sin(x **2) + np.cos(y **2) )
  
 # Creating figure
-fig = plt.figure(figsize =(14, 9))
+fig = plt.figure(figsize =(9, 9))
 ax = plt.axes(projection ='3d')
  
 # Creating color map
