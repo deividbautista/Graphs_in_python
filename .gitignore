@@ -1,3 +1,7 @@
+# Ignoramos la carpeta de .github
+# Ignoramos la carpeta de workflows
 .github/
+workflows/
 
+# Ignoramos los documentos que terminen en yml
 *.yml
