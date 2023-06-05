@@ -3,10 +3,16 @@
 
 ## Requisitos previos
 * Python [python download](https://www.python.org/downloads/release/python-31010/)
-<HR>
+* pip [pip download](https://pip.pypa.io/en/stable/installation/)
+---
 
 
-```bash
+```sh
+# Clonar el repositorio
+git clone https://github.com/deividbautista/Graphs_in_python.git
+```
+
+```sh
 # Instalar las dependencias que necesitaremos en este proyecto
 pip install -r dependencies.txt 
 ```
@@ -22,7 +28,12 @@ pip install -r dependencies.txt
 </details>
 
 
-<details>
-<summary><strong style="font-size: 20px;">Intermediate Graphics / Graficos Intermedio</strong></summary>
 
+<details>
+<summary><strong style="font-size: 20px;">Interactive 3D Graphics / Graficos Interactivos 3D</strong></summary>
+
+![](img/Graphic%20bar.png)
+![](img/Graphic%20Line.png)
+![](img/Graphic%20Line%20Point.png)
+![](img/Graphic%20Temperature.png)
 </details>
