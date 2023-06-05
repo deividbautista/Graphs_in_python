@@ -85,7 +85,12 @@ def z (x,y):
     # de la raíz cuadrada (np.sqrt), de la suma de "x" elevado ^ a la 2 y "y" elevado ^ a la 2
     return np.sin(np.sqrt(x**2 + y**2))
 
+# Utilizando la variable ax, le determinamos podemos determinar el tipo de grafico con "plot", el cual 
+# hace referencia aun grafico de tipo lineal, y dentro de "plot", le insertamos los parametros de 
+# coordenadas que deseamos graficar, los cuales en ese caso son "x","y" y "z".
 ax.plot(x, y, z(x,y))
+
+# Por ultimo se utiliza "plt.show", para ejecutar nuestro grafico en una ventana emergente individual.
 plt.show()
 
 #-----------------------------------------------
