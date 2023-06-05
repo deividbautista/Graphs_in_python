@@ -85,10 +85,45 @@ def z (x,y):
     # de la raíz cuadrada (np.sqrt), de la suma de "x" elevado ^ a la 2 y "y" elevado ^ a la 2
     return np.sin(np.sqrt(x**2 + y**2))
 
-# Utilizando la variable ax, le determinamos podemos determinar el tipo de grafico con "plot", el cual 
-# hace referencia aun grafico de tipo lineal, y dentro de "plot", le insertamos los parametros de 
-# coordenadas que deseamos graficar, los cuales en ese caso son "x","y" y "z".
+# Utilizando la variable ax, la cual le podemos determinar el tipo de grafico despúes del ".", en este caso 
+# con "plot", el cual hace referencia a un grafico de tipo lineal, y dentro de "plot", le insertamos los parametros
+# de coordenadas que deseamos graficar, los cuales en ese caso son "x","y" y "z".
 ax.plot(x, y, z(x,y))
+
+# Por ultimo se utiliza "plt.show", para ejecutar nuestro grafico en una ventana emergente individual.
+plt.show()
+
+#-----------------------------------------------
+# Gráficas lineal 3D con puntos dispersos-scatter. 
+#-----------------------------------------------
+
+# Al igual que en el ejemplo anterior utilizamso el mismo metodo para definir la figura/grafica requerida.
+fig = plt.figure()
+ax = plt.axes(projection ='3d')
+
+# Definimos los valores de "x" y "y", para usar como ejemplo una función trigonometrica a graficar.
+x = np.linspace(-3, 3, 40)
+y = np.linspace(-3, 3, 40) 
+
+# Definimos la tercera variable necesasria para el entorno tridimensional, la cual tendra los valores 
+# de coordenadas de "x" y "y".
+def z (x,y):
+
+    # Utilizamos la plabra reservada return, para obtener el resultado del calculo de seno (np.sin) 
+    # de la raíz cuadrada (np.sqrt), de la suma de "x" elevado ^ a la 2 y "y" elevado ^ a la 2
+    return (x**2 - y**2)
+
+# Definimos a "x" y "y", con la función meshgrid para poder optener valores necesarios para el grafico 
+# de tipo maya que deseamos, ya que si no realizamos esta acción los valores se pasaran como argumentos 
+# bidimensionales y esto genera un error al no tener los puntos necesarios, para el tipo de grafico que deseamos implementar.
+x,y= np.meshgrid(x,y)
+
+# Utilizamos en este caso "plot_wireframe" a diferencia del anterior, el cual hace
+# referencia a un grafico de tipo "cuadricula" o correctamente nombrada "Gráficas 3D puntos dispersos-scatter", 
+# esto para no tener solo un bloque solido con los valores graficados, si no que los dispersa entre puntos más 
+# esteticos y comprensibles, dentro de "plot", le insertamos los parametros de coordenadas que deseamos graficar, 
+# los cuales en ese caso son "x","y" y "z", replanteados anteriormente por la función meshgrid.
+ax.plot_wireframe(x, y, z(x,y))
 
 # Por ultimo se utiliza "plt.show", para ejecutar nuestro grafico en una ventana emergente individual.
 plt.show()
