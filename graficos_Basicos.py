@@ -32,7 +32,7 @@ pyplot.title ('Wenas soy un titulo suave para poner como ejemplo.')
 # Se utiliza la variable bar, para determinar el tipo de grafico que requerimos, en este caso va ser un grafico de barras.
 pyplot.bar(paises, height=valores, color=colores, width=0.5)
 
-# Por ultimo se utiliza "plt.show", para ejecutar nuestro grafico en una ventana emergente individual.
+# Por último se utiliza "plt.show", para ejecutar nuestro grafico en una ventana emergente individual.
 plt.show()
 
 #-----------------------------------------------
@@ -68,7 +68,7 @@ plt.fill_between(eje_x, linea1, color='#31003362')
 # Con "subplots_adjust", podemos editaar parametros determinado para centrar o ajustar la posición del grafico.
 plt.subplots_adjust(wspace=0.85, bottom=0.3)
 
-# Por ultimo se utiliza "plt.show", para ejecutar nuestro grafico en una ventana emergente individual.
+# Por último se utiliza "plt.show", para ejecutar nuestro grafico en una ventana emergente individual.
 plt.show()
 
 #-----------------------------------------------
@@ -97,7 +97,7 @@ plt.pie(manzanas, labels=nombres, autopct="%0.1f %%", colors=colores, explode=de
 # Implementamos axis para determinar la forma que queremos que tenga el pastel, quitalo y te daras cuenta cuenta con mejor comprensión.
 plt.axis("equal")
 
-# Por ultimo se utiliza "plt.show", para ejecutar nuestro grafico en una ventana emergente individual.
+# Por último se utiliza "plt.show", para ejecutar nuestro grafico en una ventana emergente individual.
 plt.show()
 
 #-----------------------------------------------
@@ -142,6 +142,6 @@ ax[1, 0].bar(paises['asiaticos'], valores['asia'], color = '#FCA03E', width=0.4)
 # Segundo grafico de barras de paises europeos.
 ax[1, 1].bar(paises['europeos'], valores['europa'], color = '#6e0dc9d2', width=0.35)
 
-# Por ultimo se utiliza "plt.show", para ejecutar nuestro grafico en una ventana emergente individual.
+# Por último se utiliza "plt.show", para ejecutar nuestro grafico en una ventana emergente individual.
 plt.show()
 
