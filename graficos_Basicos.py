@@ -1,6 +1,6 @@
 # Hola queridos, en el presente modulo tendremos la introducción sin paracaidas y de cabeza hacia el mundo de 
 # los graficos en python con la herramienta matplotlib, en este primer modulo encontraremos lo basico de los basico
-# espero sirva y se logre llegar al entendimiento de manera efectiva. 
+# espero te sirva y se logre llegar al entendimiento de manera efectiva. 
 
 # se estara actualizando...
 
