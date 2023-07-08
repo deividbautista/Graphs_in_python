@@ -141,7 +141,7 @@ y = x.copy().T # transpose
 z = (np.sin(x **2) + np.cos(y **2) )
  
 # Creating figure
-fig = plt.figure(figsize =(9, 9))
+fig = plt.figure(figsize =(6, 5))
 ax = plt.axes(projection ='3d')
  
 # Creating color map
@@ -180,3 +180,23 @@ ax.set_title('3D surface having 2D contour plot projections')
  
 # show plot
 plt.show()
+
+
+#------------------------------------------------------------
+
+figure=plt.figure(figsize = (6, 5))
+axes = figure.add_subplot(projection ="3d")
+ 
+random_state = np.random.RandomState(0)
+x = random_state.randn(100)
+y = random_state.randn(100)
+z = random_state.randn(100)
+color = random_state.randn(100)
+size = 500 * random_state.randn(100)
+ 
+ 
+scatter=axes.scatter(x,y,z,c=color,s=size,cmap='hsv', alpha=0.4)
+figure.colorbar(scatter,ax=axes, shrink = 0.5)
+
+plt.show()
+
