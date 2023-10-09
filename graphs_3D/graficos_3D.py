@@ -190,7 +190,7 @@ ax.set_title('Grafico de trazado de contornos en un espacio 3D')
 plt.show()
 
 #-----------------------------------------------
-# Algo no tan basico en 3D. 
+# Grafico de dispersión de puntos en 3D. 
 #-----------------------------------------------
 
 figure=plt.figure(figsize = (6, 5))
@@ -208,7 +208,7 @@ scatter=axes.scatter(x,y,z,c=color,s=size,cmap='hsv', alpha=0.4)
 figure.colorbar(scatter,ax=axes, shrink = 0.5)
 
 # Utilizamos la variable title para indicar un titulo en la pestaña de la grafica, valga la redundancia.
-pyplot.title ('Grafico de dispersión tridimensional.')
+pyplot.title ('Grafico de dispersión de puntos tridimensional.')
 
 plt.show()
 
