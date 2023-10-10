@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import axes3d
 
 #-----------------------------------------------
-# Grafico basico de barras en 3D. 
+# Grafico de barras en 3D. 
 #-----------------------------------------------
 
 # Utilizamos el siguiente metodo que es el más coloquial, definimos una variable fig la cual
@@ -49,15 +49,15 @@ valores = [1000,4500,2000,1500] #ALTURA DE CADA BARRA
 # Indicamos los colores de nuestra preferencia para utilizar.
 colores = ['#30002c','#6e0dc9d2','#30002c','#6e0dc9d2']
 
-# Utilizamos la variable title para indicar un titulo en la pestaña de la grafica, valga la redundancia.
-pyplot.title ('Grafico de barras en 3D.')
-
 # Indicamos el nombre de paises como información de ejemplo en este proyecto.
 ax.set_xlabel('Japon  España  Rusia  Inglaterra')
 
 # Se utiliza la variable bar, para determinar el tipo de grafico que requerimos, en este caso va ser un grafico de barras
 # y le añadimos la leyenda 3d, para tener el formato de grafico que deseamos, retiralo para que puedas ver su utilidad.
 ax.bar3d (x, y, z, dx, dy, valores, color=colores)
+
+# Utilizamos la variable title para indicar un titulo en la pestaña de la grafica, valga la redundancia.
+pyplot.title ('Grafico de barras en 3D.')
 
 # Por ultimo se utiliza "plt.show", para ejecutar nuestro grafico en una ventana emergente individual.
 plt.show()
@@ -90,11 +90,14 @@ def z (x,y):
 # de coordenadas que deseamos graficar, los cuales en ese caso son "x","y" y "z".
 ax.plot(x, y, z(x,y))
 
+# Utilizamos la variable title para indicar un titulo en la pestaña de la grafica, valga la redundancia.
+pyplot.title ('Grafico lineal en 3D.')
+
 # Por ultimo se utiliza "plt.show", para ejecutar nuestro grafico en una ventana emergente individual.
 plt.show()
 
 #-----------------------------------------------
-# Gráficas lineal 3D con puntos dispersos-scatter. 
+# Gráficas lineal en 3D con puntos dispersos-scatter. 
 #-----------------------------------------------
 
 # Al igual que en el ejemplo anterior utilizamso el mismo metodo para definir la figura/grafica requerida.
@@ -125,11 +128,14 @@ x,y= np.meshgrid(x,y)
 # los cuales en ese caso son "x","y" y "z", replanteados anteriormente por la función meshgrid.
 ax.plot_wireframe(x, y, z(x,y))
 
+# Utilizamos la variable title para indicar un titulo en la pestaña de la grafica, valga la redundancia.
+pyplot.title ('Grafico lineal punteada o "dispersos-scatter" en 3D.')
+
 # Por ultimo se utiliza "plt.show", para ejecutar nuestro grafico en una ventana emergente individual.
 plt.show()
 
 #-----------------------------------------------
-# Algo no tan basico en 3D. 
+# Trazado de contornos en 3D. 
 #-----------------------------------------------
 
 #Ejemplo sustraido del portal web GeeksforGeeks
@@ -176,13 +182,16 @@ ax.set_ylabel('Y-axis')
 ax.set_ylim(-5, 5)
 ax.set_zlabel('Z-axis')
 ax.set_zlim(np.min(z), np.max(z))
-ax.set_title('3D surface having 2D contour plot projections')
+
+# Utilizamos la variable set_title para indicar un titulo en la pestaña de la grafica, valga la redundancia.
+ax.set_title('Grafico de trazado de contornos en un espacio 3D')
  
 # show plot
 plt.show()
 
-
-#------------------------------------------------------------
+#-----------------------------------------------
+# Grafico de dispersión de puntos en 3D. 
+#-----------------------------------------------
 
 figure=plt.figure(figsize = (6, 5))
 axes = figure.add_subplot(projection ="3d")
@@ -197,6 +206,9 @@ size = 500 * random_state.randn(100)
  
 scatter=axes.scatter(x,y,z,c=color,s=size,cmap='hsv', alpha=0.4)
 figure.colorbar(scatter,ax=axes, shrink = 0.5)
+
+# Utilizamos la variable title para indicar un titulo en la pestaña de la grafica, valga la redundancia.
+pyplot.title ('Grafico de dispersión de puntos tridimensional.')
 
 plt.show()
 

@@ -8,6 +8,7 @@
 
 # Como primera instancia tenemos que importar todas la variables y palabras reservadas que vayamos a utilizar.
 import numpy as np
+import seaborn as sns
 from matplotlib import pyplot
 import matplotlib.pyplot as plt
 
@@ -28,7 +29,7 @@ valores = [1000,4500,2000,1500]
 colores = ['#30002c','#6e0dc9d2','#30002c','#6e0dc9d2']
 
 # Utilizamos la variable title para indicar un titulo en la pestaña de la grafica, valga la redundancia.
-pyplot.title ('Wenas soy un titulo suave para poner como ejemplo.')
+pyplot.title ('Grafico de barras.')
 
 # Se utiliza la variable bar, para determinar el tipo de grafico que requerimos, en este caso va ser un grafico de barras.
 pyplot.bar(paises, height=valores, color=colores, width=0.5)
@@ -144,4 +145,21 @@ ax[1, 0].bar(paises['asiaticos'], valores['asia'], color = '#FCA03E', width=0.4)
 ax[1, 1].bar(paises['europeos'], valores['europa'], color = '#6e0dc9d2', width=0.35)
 
 # Por ultimo se utiliza "plt.show", para ejecutar nuestro grafico en una ventana emergente individual.
+plt.show()
+
+#-----------------------------------------------
+# Graficos de barra, campana de Gauss. 
+#-----------------------------------------------
+
+# Estableemos la semilla con "np.random.seed"
+np.random.seed(1)  
+x = np.random.randn(1000)
+
+# Utilizamos la variable title para indicar un titulo en la pestaña de la grafica, valga la redundancia.
+pyplot.title ('Grafico de tendencia de probabilidad / Histograma / Campana de GAUSS.')
+
+sns.set(color_codes=True)
+sns.histplot(x, kde=True)  # Utiliza histplot en lugar de distplot
+
+# Para mostrar el gráfico
 plt.show()
