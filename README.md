@@ -3,7 +3,6 @@
 
 ## Requisitos previos
 * Python [python download](https://www.python.org/downloads/release/python-31010/)
-* pip [pip download](https://pip.pypa.io/en/stable/installation/)
 ---
 
 
